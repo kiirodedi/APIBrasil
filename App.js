@@ -1,74 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
+import 'react-native-gesture-handler'; // Importante para o funcionamento dos gestos de navegação
 
-import * as objDDD from './services/ddd.js';
-import CardDDD from './components/ddd/cardDDD';
-import React, { useEffect, useState } from 'react';
-import { TextInput } from 'react-native-web';
-import { FlashList } from '@shopify/flash-list';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+
+// Importação de telas
+import TelaInicial from './screens/tela_inicial';
+import DDD_tela from './screens/DDD_tela'
+import CEP_tela from './screens/CEP_tela';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
-  const[ddd, setDDD] = useState('');
-  const [uf, setUf] = useState('');
-  const [cities, setCities] = useState([]);
-
-  useEffect(() => {
-    if(ddd.length === 2) {
-      objDDD.buscarDDDCallBack(ddd, dados => {
-        console.log(dados);
-        setUf(dados.state);
-        setCities(dados.cities);
-      })
-    }
-  }, [ddd]);
-  
   return (
-    <View style={estilo.container}>
-      <TextInput
-        placeholder='Digite um DDD...'
-        maxLength={2}
-        value={ddd}
-        onChangeText={text => setDDD(text)}
-      />
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Início">
+        <Drawer.Screen name="Início" component={TelaInicial} />
+        <Drawer.Screen name="DDD" component={DDD_tela} />
+        <Drawer.Screen name="CEP" component={CEP_tela} />
 
-    <View style={estilo.lista}>
-      <FlashList
-        data={cities}
-        renderItem={({ item, index }) => 
-          <CardDDD
-            key={index}
-            nome={item}
-            uf={uf}
-          />
-        }
-
-      />
-    </View>
-      <StatusBar style="auto" />
-    </View>
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
-
-const estilo = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingTop: 30,
-  },
-
-  lista: {
-    flex: 1,
-    width: '100%',
-  },
-
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    width: '80%',
-    textAlign: 'center',
-    marginVertical: 10,
-  },
-});
