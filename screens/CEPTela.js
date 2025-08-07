@@ -5,7 +5,7 @@ import buscarCEPCallBack from '../services/cep.js';
 import { useEffect, useState } from 'react';
 import { TextInput } from 'react-native-web';
 
-export default function CEP_tela() {
+export default function CEPTela() {
     const [cep, setCEP] = useState('');
     const [state, setState] = useState('');
     const [city, setCity] = useState('');

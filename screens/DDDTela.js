@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { TextInput } from 'react-native-web';
 import { FlashList } from '@shopify/flash-list';
 
-export default function DDD_tela() {
+export default function DDDTela() {
   const[ddd, setDDD] = useState('');
   const [uf, setUf] = useState('');
   const [cities, setCities] = useState([]);
