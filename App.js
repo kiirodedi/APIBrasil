@@ -7,9 +7,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import TelaInicial from './screens/TelaInicial';
 import DDDTela from './screens/DDDTela';
 import CEPTela from './screens/CEPTela';
-import FeriadoTela from './screens/FeriadoTela';
 import CNPJTela from './screens/CNPJTela';
-
+import FeriadoTela from './screens/FeriadoTela';
+import CotacaoTela from './screens/CotacaoTela';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,8 +20,9 @@ export default function App() {
         <Drawer.Screen name="Início" component={TelaInicial} />
         <Drawer.Screen name="DDD" component={DDDTela} />
         <Drawer.Screen name="CEP" component={CEPTela} />
-        <Drawer.Screen name="Feriados Nacionais" component={FeriadoTela}/>
         <Drawer.Screen name="CNPJ" component={CNPJTela} />
+        <Drawer.Screen name="Feriados Nacionais" component={FeriadoTela}/>
+        <Drawer.Screen name="Cotação" component={CotacaoTela} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

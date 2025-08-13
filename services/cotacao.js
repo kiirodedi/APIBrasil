@@ -1,5 +1,5 @@
-export default function buscarCEPCallBack (cep, callback) {
-    let urlAPI = `https://brasilapi.com.br/api/cep/v1/${cep}`;
+export default function buscarCotacaoCallBack(moeda, data, callback) {
+    let urlAPI = `https://brasilapi.com.br/api/cambio/v1/cotacao/${moeda}/${data}`;
 
     fetch(urlAPI,
         { method: 'GET' })
@@ -11,4 +11,5 @@ export default function buscarCEPCallBack (cep, callback) {
         })
         .then(resposta => callback(resposta))
         .catch(error => {console.error("Erro:", error)});
+        
 }

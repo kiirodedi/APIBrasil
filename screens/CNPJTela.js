@@ -7,7 +7,7 @@ import { TextInput } from 'react-native-web';
 
 export default function CNPJTela() {
     const [cnpj, setCNPJ] = useState('');
-    const [nome_socio, setSocios] = useState([]); // Variável para a lista de sócios
+    const [nome_socio, setSocios] = useState([]);
     const [ddd_fax, setddd_fax] = useState('');
     const [municipio, setMunicipio] = useState('');
     const [bairro, setBairro] = useState('');
@@ -38,12 +38,12 @@ export default function CNPJTela() {
             />
 
             <View style={estilo.info}>
-                {nome_socio.map((socio, index) => ( // Troquei 'socio' por 'nome_socio'
+                {nome_socio.map((socio, index) => (
                     <View key={index} style={estilo.text}>
                         <Text>Nome do sócio: {socio.nome_socio}</Text>
                     </View>
                 ))}
-                <Text>FAX: {ddd_fax}</Text>
+                <Text>DDD: {ddd_fax}</Text>
                 <Text>Município: {municipio}</Text>
                 <Text>Bairro: {bairro}</Text>
                 <Text>Número: {numero}</Text>
