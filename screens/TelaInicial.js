@@ -14,12 +14,13 @@ export default function TelaInicial() {
 const estilo = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#f0f0f0',
         alignItems: 'center',
         justifyContent: 'center',
         padding: 20,
     },
     titulo: {
+        color: '#000922',
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 10,
@@ -27,7 +28,7 @@ const estilo = StyleSheet.create({
     },
     subtitulo: {
         fontSize: 16,
-        color: '#666',
         textAlign: 'center',
+        color: '#002ba0ae',
     }
 });

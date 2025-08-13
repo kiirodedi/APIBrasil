@@ -52,7 +52,7 @@ export default function DDDTela() {
 const estilo = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dbe5ff',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 30,
@@ -65,10 +65,10 @@ const estilo = StyleSheet.create({
 
   input: {
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
     width: '80%',
     textAlign: 'center',
     marginVertical: 10,
+    borderRadius: 50,
+    backgroundColor: '#fff',
   },
 });

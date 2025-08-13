@@ -34,10 +34,14 @@ export default function CEPTela() {
             />
 
             <View style={estilo.info}>
-                <Text>Estado: {state}</Text>
-                <Text>Cidade: {city}</Text>
-                <Text>Bairro: {neighborhood}</Text>
-                <Text>Rua: {street}</Text>
+                <Text style={estilo.tit_info}>ESTADO: </Text>
+                <Text style={estilo.res_info}>{state}</Text>
+                <Text style={estilo.tit_info}>CIDADE:</Text>
+                <Text style={estilo.res_info}>{city}</Text>
+                <Text style={estilo.tit_info}>BAIRRO:</Text>
+                <Text style={estilo.res_info}>{neighborhood}</Text>
+                <Text style={estilo.tit_info}>RUA:</Text>
+                <Text style={estilo.res_info}>{street}</Text>
             </View>
             <StatusBar style="auto" />
         </View>
@@ -46,29 +50,43 @@ export default function CEPTela() {
 
 const estilo = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingTop: 30,
+      flex: 1,
+      backgroundColor: '#dbe5ff',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      paddingTop: 30,
     },
+
     input: {
-        width: '90%',
-        height: 50,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 5,
-        paddingHorizontal: 10,
-        marginBottom: 20,
+      height: 40,
+      width: '80%',
+      textAlign: 'center',
+      marginVertical: 10,
+      borderRadius: 50,
+      backgroundColor: '#fff',
     },
+
     info: {
         width: '90%',
         padding: 10,
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#fff',
         borderRadius: 5,
     },
-    text: {
-        fontSize: 16,
-        marginBottom: 5,
+
+    tit_info: {
+        fontSize: 14,
+        color: '#002ba0ae',
+        backgroundColor: '#dbe5ff',
+        fontWeight: 'bold',
+        marginVertical: 5,
+        padding: 5,
+        borderRadius: 5,
+        alignSelf: 'flex-start',
+    },
+
+    res_info: {
+        fontSize: 18,
+        color: '#000922',
+        marginHorizontal: 10,
     },
 });
