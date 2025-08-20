@@ -77,11 +77,6 @@ const estilo = StyleSheet.create({
         paddingHorizontal: 20,
     },
 
-    scrollContent: {
-        alignItems: 'center',
-        paddingBottom: 20,
-    },
-
     input: {
         height: 40,
         width: '80%',

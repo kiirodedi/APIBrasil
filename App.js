@@ -16,7 +16,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="CNPJ">
+      <Drawer.Navigator initialRouteName="Cotação">
         <Drawer.Screen name="Início" component={TelaInicial} />
         <Drawer.Screen name="DDD" component={DDDTela} />
         <Drawer.Screen name="CEP" component={CEPTela} />

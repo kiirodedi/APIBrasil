@@ -37,16 +37,19 @@ export default function CotacaoTela() {
                 onChangeText={text => setData(text)}
             />
 
-            <Button
+        <Button style={{ marginBottom: 10 }}
                 title="Buscar Cotação"
                 onPress={BuscarDados}
             />
 
             {cotacao && (
             <View style={estilo.info}>
-            <Text>Moeda: {moeda}</Text>
-            <Text>Cotação Venda: {cotacao.cotacao_venda}</Text>
-            <Text>Cotação Compra: {cotacao.cotacao_compra}</Text>
+                <Text style={estilo.tit_info}>Moeda:</Text>
+                <Text style={estilo.res_info}>{moeda}</Text>
+                <Text style={estilo.tit_info}>Cotação Venda:</Text>
+                <Text style={estilo.res_info}> {cotacao.cotacao_venda}</Text>
+                <Text style={estilo.tit_info}>Cotação Compra:</Text>
+                <Text style={estilo.res_info}> {cotacao.cotacao_compra}</Text>
             </View>
         )}
             <StatusBar style="auto" />
@@ -57,29 +60,46 @@ export default function CotacaoTela() {
 const estilo = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#dbe5ff',
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingTop: 30,
     },
+
     input: {
-        width: '90%',
-        height: 50,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 5,
-        paddingHorizontal: 10,
-        marginBottom: 20,
-    },
-    info: {
-        width: '90%',
-        padding: 10,
-        backgroundColor: '#f9f9f9',
-        borderRadius: 5,
-    },
-    text: {
-        fontSize: 16,
-        marginBottom: 5,
+        height: 40,
+        width: '80%',
+        textAlign: 'center',
+        marginVertical: 10,
+        borderRadius: 50,
+        backgroundColor: '#fff',
     },
 
+    info: {
+        width: '100%',
+        padding: 10,
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        alignItems: 'center',
+        marinTop: 100,
+                paddingRight: 10,
+        paddingLeft: 10,
+    },
+
+    tit_info: {
+        fontSize: 14,
+        color: '#002ba0ae',
+        backgroundColor: '#dbe5ff',
+        fontWeight: 'bold',
+        marginVertical: 5,
+        padding: 5,
+        borderRadius: 5,
+        alignSelf: 'flex-start',
+    },
+
+    res_info: {
+        fontSize: 18,
+        color: '#000922',
+        marginHorizontal: 10,
+    },
 });

@@ -49,25 +49,25 @@ export default function FeriadoTela() {
 
 
 const estilo = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      paddingTop: 30,
-    },
-  
-    lista: {
-      flex: 1,
-      width: '100%',
-    },
-  
-    input: {
-      height: 40,
-      borderColor: 'gray',
-      borderWidth: 1,
-      width: '80%',
-      textAlign: 'center',
-      marginVertical: 10,
-    },
-  });
+container: {
+    flex: 1,
+    backgroundColor: '#dbe5ff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 30,
+},
+
+lista: {
+    flex: 1,
+    width: '100%',
+},
+
+input: {
+    height: 40,
+    width: '80%',
+    textAlign: 'center',
+    marginVertical: 10,
+    borderRadius: 50,
+    backgroundColor: '#fff',
+},
+});
