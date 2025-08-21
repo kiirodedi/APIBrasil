@@ -76,14 +76,11 @@ const estilo = StyleSheet.create({
     },
 
     info: {
-        width: '100%',
+        width: '90%',
         padding: 10,
         backgroundColor: '#fff',
         borderRadius: 5,
-        alignItems: 'center',
-        marinTop: 100,
-                paddingRight: 10,
-        paddingLeft: 10,
+        marginTop: 10,
     },
 
     tit_info: {

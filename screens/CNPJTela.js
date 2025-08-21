@@ -85,12 +85,13 @@ const estilo = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: '#fff',
     },
+
     info: {
-        width: '100%',
+        width: '90%',
         padding: 10,
         backgroundColor: '#fff',
         borderRadius: 5,
-        alignItems: 'center',
+        marginLeft: 13,
     },
 
     tit_info: {
